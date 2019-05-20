@@ -25,7 +25,9 @@ class Song
   def self.create_by_name(name)
     song = self.create
     song.name = name
+    @@all << song
     return song
+    
   end
   
   def self.find_by_name(name)
@@ -41,7 +43,7 @@ class Song
   end
         
   def self.alphabetical(name)
-    sorted = @@all.sort 
+    sorted = self.all.sort 
     return sorted
   end
     
