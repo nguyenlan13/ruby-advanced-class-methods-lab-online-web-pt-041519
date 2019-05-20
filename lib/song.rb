@@ -49,6 +49,9 @@ class Song
     
   def self.new_from_filename(filename)
     puts filename[0..-5]
+    nameWithoutExtension = filename[0..-5]
+    
+    artist_name = 
   end
     
 end
