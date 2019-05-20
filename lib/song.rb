@@ -33,8 +33,13 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
-    
-  
+    song = self.find_by_name(name)
+    if song == nil
+      song = self.create_by_name(name)
+    end
+    return song
+  end
+        
   def self.alphabetical(name)
     sorted = self.all.sort_by {|song|song.name}
     return sorted
