@@ -28,7 +28,7 @@ class Song
     @@all << song
     return song
     
-  end
+  endz
   
   def self.find_by_name(name)
     song = self.all.find{|song| song.name == name}
@@ -48,13 +48,13 @@ class Song
   end
     
   def self.new_from_filename(filename)
-    puts filename[0..-5]
     nameWithoutExtension = filename[0..-5]
     splitName = nameWithoutExtension.split(" - ")
     
-    artist_name = splitName[0]
-    song_name = splitName[1];
-    
+    song = self.create
+    song.artist_name = splitName[0]
+    song.name = splitName[1]
+    return song
   end
     
 end
