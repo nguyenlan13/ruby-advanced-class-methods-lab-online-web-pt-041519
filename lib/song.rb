@@ -66,6 +66,7 @@ class Song
     song.name = splitName[1]
     return song
   end
-  def
+  def self.destroy_all
+    
   
 end
