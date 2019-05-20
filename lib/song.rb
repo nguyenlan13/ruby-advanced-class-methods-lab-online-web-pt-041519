@@ -48,7 +48,7 @@ class Song
   end
     
   def self.new_from_filename(filename)
-    puts filename[0..-4]
+    puts filename[0..-5]
   end
     
 end
