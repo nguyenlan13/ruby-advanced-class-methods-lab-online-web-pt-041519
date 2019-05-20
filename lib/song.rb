@@ -32,7 +32,7 @@ class Song
     song = self.all.find{|song| song.name == name}
   end
   
-  def 
+  
   
   def self.alphabetical(name)
     self.all.sort_by{|song|song.name}
