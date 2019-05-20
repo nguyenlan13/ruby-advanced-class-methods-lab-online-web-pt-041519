@@ -15,5 +15,11 @@ class Song
     @@all << song
     return song
     
+  def self.new_by_name(name)
+    song = self.create
+    song.name = name
+    return song
+  end
+    
   end
 end
