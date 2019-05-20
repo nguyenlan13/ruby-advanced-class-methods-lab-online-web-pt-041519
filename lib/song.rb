@@ -50,8 +50,11 @@ class Song
   def self.new_from_filename(filename)
     puts filename[0..-5]
     nameWithoutExtension = filename[0..-5]
+    splitName = nameWithoutExtension.split(" - ")
     
-    artist_name = 
+    artist_name = splitName[0]
+    song_name = splitName[1];
+    
   end
     
 end
